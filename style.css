@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+/* Conteneur principal qui limite la largeur du contenu */
+.contener1 {
+    width: 1000px;
+    margin: 20px;
+}
+
+/* SECTION 1 : TÊTE DE PAGE (Textes et Notations) */
+.sect1 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    
+}
+
+/* Bloc du texte à gauche (qui sera en haut sur mobile) */
+.heade-left {
+    width: 32%;
+    margin-bottom: 30px;
+}
+
+.heade-left h1 {
+    font-size: 2rem;
+    color: #3d0a4e;
+    margin-bottom: 15px;
+}
+
+.heade-left p {
+    color: #777;
+    line-height: 1.5rem;
+}
+
+/* Bloc des notations à droite (qui sera en bas sur mobile) */
+.heade-rigth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.stars1, .stars2, .stars3 {
+    background-color: #f5f1f7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+.stars1:hover, .stars2:hover, .stars3:hover{
+    background-color:  #dbdada;
+}
+.stars p {
+    font-weight: bold;
+    color: #777; /* Couleur pour le texte de notation */
+}
+.stars-span {
+    color: orange; /* Couleur des étoiles */
+    font-size: 1rem;
+    margin-right: 5px;
+}
+.stars1{
+    margin-left: 35px;
+}
+.stars3{
+    margin-right: 35px;
+}
+
+/* SECTION 2 : CARTES DE TÉMOIGNAGES */
+.contener2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.block1, .block2, .block3 {
+    background-color:  #4b0a63;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.block1:hover, .block2:hover, .block3:hover {
+    background-color:  #8f33ad;
+}
+.sect-img {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sect-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.span-tetle h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.span-tetle .span {
+    color: #c9a2db; /* Couleur de l'acheteur vérifié */
+    font-size: 0.95rem;
+}
+
+.p-card {
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    body{
+        height: auto;
+    }
+    .contener1{
+        margin: 20px;
+        overflow: hidden;
+    }
+    
+    /* Réarrangement horizontal de la section */
+    .sect1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+    
+    .heade-left {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .heade-rigth {
+        margin-top: 30px;
+        width: 100%;
+        align-items: center;
+    }
+    
+    .stars1, .stars2, .stars3{
+        padding: 5px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    /* Les notations s'affiche sur une seule ligne */
+    .stars p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .stars-span {
+        margin: 0;
+    }
+    
+    /* Les cartes s'affichent sur une seule ligne */
+    .contener2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .cont2, .cont3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .cont2, .cont3 {
+        width: 100%;
+    }
+}
