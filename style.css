@@ -7,7 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 6rem;
+    /* height: 100vh; */
     background-color: #fafafa;
 }
 
@@ -20,10 +21,10 @@ body {
 /* SECTION 1 : TÊTE DE PAGE (Textes et Notations) */
 .sect1 {
     display: flex;
-    text-align: left;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    text-align: left;
     margin-bottom: 30px;
     
 }
